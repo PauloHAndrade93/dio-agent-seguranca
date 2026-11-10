@@ -43,6 +43,16 @@ Entre as ideias sugeridas, escolhi **fazer a análise sair sempre no mesmo forma
 
 Detalhes do laboratório em [`lab/README.md`](lab/README.md).
 
+### Evidências
+
+Testes feitos no harness Google Antigravity, sobre código do próprio laboratório:
+
+| # | O que mostra |
+|---|--------------|
+| ![Análise do app.py](images/01-analise-app-vulneravel.png) | **Análise do `app.py`**: o agente identifica a SQL Injection (CWE-89), cita a técnica MITRE ATT&CK (T1190) e preenche o formato padrão de risco (impacto, probabilidade, severidade). |
+| ![Perguntas de contexto](images/02-perguntas-de-contexto.png) | **Contexto antes de agir**: diante de um servidor Ubuntu exposto, o agente pergunta o contexto antes de sugerir qualquer comando, em vez de responder genérico. |
+| ![Correção mitigada](images/03-correcao-mitigada.png) | **Validação da correção**: após a consulta parametrizada, o agente confirma o status **Mitigado**. |
+
 ---
 
 ## ✨ Três palavras para começar
